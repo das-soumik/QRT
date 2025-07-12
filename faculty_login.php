@@ -2,7 +2,7 @@
 header("Content-Type: application/json");
 
 // DB connection
-$conn = new mysqli(getenv("HOST"), getenv("USER"), getenv("DB_PASSWORD"), "qr_attendence");
+$conn = new mysqli(getenv("HOST"), getenv("USER"), getenv("DB_PASSWORD"), "getenv("DB_PORT")");
 
 if ($conn->connect_error) {
     echo json_encode(["status" => "fail", "message" => "Database connection failed"]);
